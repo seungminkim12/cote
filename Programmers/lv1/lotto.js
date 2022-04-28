@@ -4,9 +4,12 @@
 
 //my code
  function solution(lottos, win_nums) {
+    lottos = [44, 1, 0, 0, 31, 25];
+    win_nums = [31, 10, 45, 1, 6, 19];
+    //return [3,5]
     var answer = [];
-    let r = [];
-    let nr = []    
+    let r = []; // 최고순위
+    let nr = [] //최저순위   
     lottos.forEach((l) => {
         win_nums.forEach((w, idx) => {
             if(l === w ){                
@@ -36,4 +39,4 @@ function solution(lottos, win_nums) {
     return [rank[maxCount], rank[minCount]];
 }
 
-soulution()
+console.log(solution())
