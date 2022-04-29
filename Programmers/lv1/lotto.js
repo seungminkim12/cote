@@ -38,5 +38,4 @@ function solution(lottos, win_nums) {
 
     return [rank[maxCount], rank[minCount]];
 }
-
 console.log(solution())
