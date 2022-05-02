@@ -1,37 +1,27 @@
 /**
- * 
+ * 최대공약수 최소공배수
+ * https://programmers.co.kr/learn/courses/30/lessons/12940
  */
 
- function solution(n, m) {
-    var answer = [];
-    let check = true;
-    let divValue = m % n;
-    let result = 0;
-    let max = 0;
-    let min = 0;
-    let temp = 0;
-    console.log('divValue',divValue)
-    if(divValue === 0){
-        max = m;
-        min = n;
-    }else{        
-        result = m;
-        while(check){
-            if(divValue === 0){
-                check = false;
-                min = temp
-            }else if (divValue === 1){                
-                min = temp
-                check = false;
-            }            
-            temp = divValue;
-            divValue = result % divValue;
-            result = temp;
-        }
+function solution(n, m) {
+    var answer = [];     
+    let temp = 0;    
+    let max = Math.max(n,m);        
+    let min = Math.min(n,m);
+    console.log('min&max',min,max)    
+    while(min){                   
+        temp = min;
+        min = max % min;
+        max = temp;
     }
-    max = m*n/min;
-    console.log('min',min)
+    console.log('min2',min)
+    if (!min){
+        console.log('min = 0')
+        answer.push(max);
+    }
+    console.log('max in',m*n/max)
     console.log('max',max)
-    return answer.push(min,max);
+    answer.push(m*n/max);
+    return answer;
 }
-console.log(solution(3,12))
+console.log(solution(0,59))
