@@ -1,7 +1,8 @@
 /**
- * https://www.acmicpc.net/problem/2442
+ * 
  */
-function solution(value){     
+
+ function solution(value){     
     let star = '';
     for(let i = 1; i < value+1; i++){        
         star = '';
