@@ -1,30 +1,26 @@
 /**
- * 
- */
-
-/**
- * 12
-77
-38
-41
-53
-92
-85
-
-return 256
-41
-
+ * https://www.acmicpc.net/problem/2576
  */
 
 function solution(value){
-    console.log('value',value)
-    let oddSum = value.reduce((sum,item ) => {
-        console.log('item',item)
-        if(item%2 !== 0){
-            return sum = sum + item;
+    let min = null;    
+    let oddSum = value.reduce((sum,item ) => {        
+        if(item%2 > 0){
+            if(!min){
+                min = item;
+            }
+            min = Math.min(min,item)
+            sum = sum + item;
         }
-    })
-    console.log(oddSum)
+        return sum;
+    },0)
+    if(!oddSum){
+        console.log(oddSum)
+        console.log(min)
+    }else{
+        console.log(-1)
+    }    
 }
 
-console.log(solution([12, 77, 38, 41, 53, 92, 85]))
+solution([12, 77, 38, 41, 53, 92, 85])
+// solution([2, 4, 20, 32, 6, 10, 8])
