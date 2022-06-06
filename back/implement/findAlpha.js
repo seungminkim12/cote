@@ -27,13 +27,11 @@
 // }
 
 function solution(value){
-    let str = '';
-    for(let i = 97; i<123; i++){
-        for(let item of value){
-            str += `${item.indexOf(item.indexOf(String.fromCodePoint(i)))} `
-        }        
+    let arr = [];
+    for(let i = 97; i<123; i++){        
+        item.indexOf(item.indexOf(String.fromCodePoint(i))        
+        
     }
-    return str
 }
 
 console.log(solution('asdffwefasdfasdfasdfwefdsafasdfsa'))
