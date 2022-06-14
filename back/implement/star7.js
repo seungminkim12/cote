@@ -7,7 +7,7 @@
     for (let i = 1; i<2*value; i++){
         star = '';
         let center = Math.floor((2*value)/2 + (2*value)%2);        
-        for(let j = 0; j<2*value; j++){
+        for(let j = 1; j<2*value; j++){
             let sur = i            
             if(i > center){
                 sur = 2*value- i
